@@ -1,0 +1,31 @@
+@media print{
+
+
+html{
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-y: auto;
+	font-size:0.9em;		
+}
+
+body {
+	color:#333;
+	background:#FFF;
+	margin:10px;
+	padding:0;
+}
+
+header,nav,footer,form,#jkn21_pagenation,.dictionary_result_num, #mcs3_container .dragger {
+	display:none;
+}
+
+#mcs3_container .customScrollBox .container {
+	width:90%;
+}
+
+#jkn21_result_list {
+	background:#FFF;
+}
+
+}

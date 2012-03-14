@@ -1,0 +1,760 @@
+@charset "utf-8";
+/*
+Theme Name: 佛教大学図書館ポータルサイト
+Author: yasushi inoue
+Version: 1.0
+*/
+
+html {
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-y: hidden;
+}
+
+body {
+	height:100%;
+	padding-bottom:10px;
+	margin:80px auto 0;
+	font-family:verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+	color:#333;
+	background:#555;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	
+}
+
+a {
+	outline: none;
+}
+
+#info_contents {
+	color:#555;
+	background:#FFF;
+	border:5px solid #000;
+	width:95%;
+	margin:20px auto;
+	line-height:1.5em;	
+}
+
+#info_contents img {
+	margin:0 30px;
+	text-align:center;
+}
+
+#info_contents h2{
+	font-size:13px;
+	font-weight:normal;
+	color:#FFF;
+	padding:2px 35px 4px;
+	margin:0 0 20px;
+	background:url(images/info01.png) no-repeat 10px 3px #000;	
+}
+
+#info_contents p{
+	margin:10px 20px;
+}
+
+#jkn21 {	
+	font-size:12px;
+	width: 100%;
+	padding:0;
+	margin:0 auto;
+	position:relative;
+}
+
+.open:hover {
+	cursor:pointer;
+}
+
+a {
+	text-decoration:none;
+	color:#000099;
+}
+
+.hide {
+	display:none;
+}
+
+.show {
+	display:block;
+}
+
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow:hidden;}
+.clearfix {display: block;}
+.clear { clear:both; }
+
+header {
+	margin:0 10px;
+}
+
+#jkn21 h1{
+	background:url(images/twi_usagi_icon1_normal.jpg) no-repeat;
+	text-indent:-9999px;
+	width:48px;
+	height:48px;
+	border:1px solid #FFF;
+	display:block;
+	padding:0;
+	margin:10px;
+	clear:both;
+	z-index:200;
+	float:left;
+}
+
+.explain {
+	display:none;
+}
+
+.explain p{
+	font-size:11px;
+	line-height:1.5em;
+	padding:5px;
+	margin:0 10px;
+	border:3px solid #999;
+	color:#333;
+	background:#fff;
+}
+
+#jkn21_search_form {
+	margin:0;
+	padding:0;
+	clear:both;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+}
+
+.ui-state-error {
+	background:url(images/dialog-warning-3.png) no-repeat 10px 50% #FFF;
+	padding:30px 10px 30px 50px;
+	clear:both;
+	margin:0;
+}
+
+/*------------  form    --------------*/
+
+.iform {
+	margin:5px 0 0;
+	padding:0;
+}
+
+.iform ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.iform li {
+	list-style:none;
+}
+
+.itext{
+	color:#666;
+	width:180px;
+	border:1px solid #C5DBEC;
+	margin-right:10px;
+	padding:5px;
+	background: #fff;
+}
+
+#jkn21_form {
+	margin:0 auto;
+	text-align:left;
+	background:url(images/banner_jk.gif) no-repeat #EEE 0px 10px;
+}
+
+#jkn21_content ul li{
+	list-style:none;
+}
+
+#jkn21_detail_select {
+	background-color:#CCC;
+	margin:0;
+	border:2px solid #CCC;
+	clear:both;
+	overflow-y: hidden;	
+}
+
+
+#jkn21_detail_select ul {
+	overflow-y: hidden;
+	margin:0;
+}
+
+#jkn21_detail_select li {
+	line-height:2em;	
+	clear:both;
+	padding:0 10px;
+}
+
+#list_dictionary,#list_article,#list_all {
+	padding:0 0 10px;
+	background:#FFF;
+	height:auto;
+}
+
+/* .jkn21_button
+*******************************************************************************/
+
+#prev_page a, #next_page a{
+	font-size:12px;
+	width:100px;
+	display:inline-block;
+	margin:3px 10px;
+	z-index:500;
+	color: #fef4e9;
+	padding:3px 5px;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');	
+}
+
+#prev_page a:hover, #next_page a:hover{
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#F78D1D', endColorstr='#faa51a');	
+}
+
+
+#jkn21_text , #jkn21_search_button {
+	display:none;
+}
+
+#jkn21_result_list {
+	display:none;
+	font-size:11px;
+	margin:0 0 150px;
+	line-height:1.4em;	
+	padding:3px;
+	background:#CCC;
+	clear:both;
+}
+
+#jkn21_pagenation {
+	position:fixed;
+	bottom:26px;
+	left:0;
+	padding:3px 10px;
+	margin:15px auto 0;
+	text-align:center;
+	background:#CCC;
+	width:100%;
+	border-top: 1px solid #999;
+	border-bottom:1px solid #CCC;
+}
+
+#jkn21_items {
+	padding:0;
+	margin:0;
+	margin-bottom:50px;
+	background-color:#555;
+}
+
+.jkn21_item {
+	margin:0 0 1px;
+	padding:2px 10px 2px 15px;
+	background:#FEFEFE;
+}
+
+.jkn21_item h3{
+	margin:5px;
+	color:#666;
+}
+
+.jkn21_item h3 span {
+	color:#000;
+}
+
+.jkn21_item:hover {
+	background-color:#EEE;
+	padding-left:5px;	
+	border-left:10px solid #666;
+}
+
+.jkn21_item p {
+	margin:5px;
+	font-size:11px;
+}
+
+#result_nav {
+	margin:0;
+	padding:5px 10px;
+	border-bottom: 1px solid #999;
+	clear:both;
+	background-color:#CCC;
+	position:relative;
+}
+
+#open_ndlsh {
+	position:absolute;
+	right:10px;
+	padding-left:20px;
+	background:url(images/tags.png) no-repeat 0 50% #CCC;
+}
+
+#open_ndlsh:hover {
+	cursor:pointer;
+	background:url(images/tags_hover.png) no-repeat 0 50% #CCC;	
+}
+
+#open_ndlsh.active{
+	background:url(images/arrow-8-down.png) no-repeat 0 50% #CCC;
+}
+
+#open_ndlsh.active:hover{
+	background:url(images/arrow-8-down_hover.png) no-repeat 0 50% #CCC;
+}
+
+
+
+.dictionary_result_num, .article_result_num, .all_result_num {
+}
+
+
+#jkn21_result_list h3 {
+	font-weight:bold;
+	font-size:12px;
+}
+
+#jkn21_kywd_result{
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+#jkn21_content.jkn21_hide:hover, #jkn21_remove:hover, #jkn21_detail:hover {
+	cursor:pointer;
+}
+
+.item_display, .item_blank {
+    border-bottom: 1px dotted #000099;
+    color: #000099;
+    word-wrap: break-word;
+}
+
+.item_display:hover {
+    cursor: pointer;
+}
+
+.show_explain, .open_explain {
+	background:url(images/comment_alt2_stroke_12x9.png) no-repeat 50% 50%;
+	text-indent:-9999px;
+	width:15px;
+	height:1em;
+	display:inline-block;
+}
+
+.open_explain {
+	background:url(images/comment_alt2_stroke_12x9.png) no-repeat 50% 50%;
+}
+
+.open_explain {
+	background:url(images/comment_alt2_fill_9x12.png) no-repeat 50% 50%;
+}
+
+.show_explain:hover, .open_explain:hover {
+	cursor:pointer;
+}
+
+.title_explain {
+	line-height:1.5em;
+	background:#F60;
+	display:none;
+	margin:1em 0;
+	padding:5px 8px;
+    background:#EEE;
+    border:1px solid #999;
+}
+
+#jkn21_search_detail {
+	margin-left:10px;
+}
+
+.open_detail{
+	padding-left:17px;
+	background:url(images/arrow_right_alt1_12x12.png) no-repeat 0 45%;	
+}
+
+.close_detail{
+	padding-left:17px;
+	background:url(images/x_alt_12x12.png) no-repeat 0 45%;	
+}
+
+#jkn21_search_detail:hover {
+	cursor:pointer;
+}
+
+footer {
+	background:#333;
+	position:fixed;
+	bottom:0;
+	width:100%;	
+	left:0;
+	height:26px;
+}
+
+footer:hover {
+	background:#333;
+}
+
+#link_home a{
+	position:absolute;
+	bottom:6px;
+	left:10px;
+	background:url(images/home.png) no-repeat 0 50%;
+	text-indent:-9999px;
+	display:inline-block;
+	width:15px;
+	height:15px;
+}
+
+#link_home a:hover{
+	background:url(images/home_hover.png) no-repeat 0 50%;
+}
+
+
+#print a{
+	position:absolute;
+	bottom:3px;
+	left:40px;
+	background:url(images/print.png) no-repeat 0 50%;
+	text-indent:-9999px;
+	display:inline-block;
+	width:20px;
+	height:20px;
+}
+
+#print a:hover{
+	background:url(images/print_hover.png) no-repeat 0 50%;
+}
+
+
+#copyText{
+	position:absolute;
+	bottom:3px;
+	left:68px;
+	background:url(images/copy.png) no-repeat 0 50%;
+	text-indent:-9999px;
+	display:inline-block;
+	width:20px;
+	height:20px;
+}
+
+#copyText:hover{
+	cursor:pointer;
+	background:url(images/copy_hover.png) no-repeat 0 50%;	
+}
+
+/* 「履歴」 */
+
+#yourkywd {
+	font-size:12px;
+	position:absolute;
+	bottom:3px;
+	right:0;
+	color:#CCC;
+	padding:2px 3px;
+}
+
+#yourkywd a {
+	color:#CCC;
+	font-weight:bold;
+}
+
+#yourkywd a:hover {
+	color:#FFF;
+}
+
+#history{
+	margin-left:5px;
+	background:url(images/play_alt.png) no-repeat 0 80%;
+	text-indent:-9999px;
+	display:inline-block;
+	width:20px;
+	height:20px;
+}
+
+#history:hover {
+	cursor:pointer;
+	background:url(images/play_alt_hover.png) no-repeat 0 80%;	
+}
+
+#history_content {
+	display:none;
+	position:fixed;
+	bottom:0;
+	left:0;
+	font-size:12px;	
+	padding-bottom:10px;
+	width:100%;
+	background:#333;
+	border-top:1px solid #999;
+	line-height:1.5em;
+	z-index:1200;
+}
+
+#history_content h4{
+	margin:0 0 20px;
+	padding:5px 10px 5px 28px;
+	color:#FFF;
+	font-size:13px;
+	font-weight:normal;
+	background:#000;
+	background:url(images/box_12x12.png) no-repeat 10px 50% #000;
+	
+}
+
+#history_content h5{
+	margin:0;
+	color:#333;
+	font-size:12px;
+	font-weight:normal;
+	background:#666;
+	padding:3px 5px 3px 22px;
+	border-bottom:1px solid #999;
+}
+
+#kywd_list h5 {
+	background:url(images/tag_stroke_12x12.png) no-repeat 5px 50% #CCC;
+}
+
+#fav_list h5 {
+	background:url(images/tag_stroke_12x12.png) no-repeat 5px 50% #CCC;
+}
+
+
+#history_content ul{
+	background:#FFF;
+}
+
+#history_content a{
+	color:#333;
+	border-bottom:1px dotted #CCC;
+}
+
+#history_content a:hover{
+	color:#666;
+}
+
+#history_content ul{
+	margin:0 20px;
+	padding:10px 5px;
+}
+
+#kywd_list {
+	margin:10px 5px;
+	background:#FFF;
+}
+
+#fav_list {
+	display:none;
+	margin:10px 5px;
+	background:#FFF;
+}
+
+.close_history {
+	position:absolute;
+	top:6px;
+	right:10px;
+	background:url(images/x_alt_16x16.png) no-repeat 0 50%;
+	text-indent:-9999px;
+	width:16px;
+	height:16px;
+	display:block;
+}
+
+.close_history:hover {
+	cursor:pointer;
+	background:url(images/x_alt_16x16_hover.png) no-repeat 0 0;
+}
+
+
+.searchForm-act{
+	background:#000;
+	color:#FFF;
+	padding:7px 0 5px;
+	margin:0;
+}
+
+.radio{
+	z-index: -1;
+	position: absolute;
+}
+
+.radiolabel{
+	background:#000;
+	margin:0;
+	padding:7px 5px 5px;
+	top:0;
+	border-top:2px solid #000;	
+}
+
+.radiolabel:hover{
+	cursor:pointer;
+	background:#555;
+	border-top:2px solid #F78D1D;	
+}
+
+.RadioSelected{
+	background:#555;
+	border-top:2px solid #F78D1D;
+}
+
+#radio_dictionary {
+	background:url(images/book_12x12.png) no-repeat 10px 55%;
+	padding-left:28px;
+}
+
+#radio_article {
+	background:url(images/article_12x12.png) no-repeat 10px 55%;
+	padding-left:28px;
+}
+
+#radio_all {
+	background:url(images/document_fill_12x12.png) no-repeat 10px 55%;
+	padding-left:28px;
+}
+
+#list_dictionary h5, #list_article h5, #list_all h5 {
+	color:#CCC;
+	font-size:11px;
+	font-weight:normal;
+	margin:5px 0;
+	padding:0 3px 0 26px;
+	border:1px solid #333;
+	background:url(images/glass.png) no-repeat 8px 50% #555;	
+}
+
+#list_dictionary h5:hover, #list_article h5:hover, #list_all h5:hover{
+	color:#FFF;
+	background:url(images/glass_hover.png) no-repeat 8px 50% #333;	
+}
+
+#list_dictionary h5.active,#list_article h5.active,#list_all h5.active{
+	color:#FFF;
+	background:url(images/play_9x12.png) no-repeat 8px 52% #333;	
+}
+
+#list_dictionary h5:hover, #list_article h5:hover, #list_all h5:hover{
+	cursor:pointer;
+}
+
+#list_dictionary ul li ul, #list_article ul li ul, #list_all ul li ul{
+	margin:-5px 0 0;
+	padding:0;
+	border:3px solid #999;
+	background:#DFDFDF;
+	display:none;
+}
+
+#copyright {
+	font-size: 10px;
+	margin: 2px;
+	padding: 0;
+}
+
+
+/* 「他のキーワード」 */
+
+#ndlsh {
+	padding-bottom:10px;
+	background:#555;
+}
+
+#ndlsh div{
+	margin:10px;
+	background:#FCFCFC;
+	border:1px solid #CCC;
+}
+
+#ndlsh.hide {
+	margin:0;
+}
+
+#ndlsh h3 {
+	margin:0;
+	padding:5px 10px 5px 23px;
+	color:#CCC;
+	font-size:12px;
+	font-weight:normal;
+	background:url(images/tags_orange.png) no-repeat 5px 50% #333;
+	border-bottom:1px solid #666;
+}
+
+#ndlsh h4 {
+	margin:0;
+	color:#333;
+	font-size:12px;
+	font-weight:normal;
+	background:#666;
+	padding:3px 5px 3px 22px;
+	border-bottom:1px solid #999;
+	background:url(images/tag_stroke_12x12.png) no-repeat 5px 50% #CCC;
+}
+
+#ndlsh ul{
+	margin:0;
+	padding:10px 25px;
+	line-height:1.6em;
+}
+
+#ndlsh li{
+	margin-left:5px;
+}
+
+#ndlsh a {
+	padding-bottom:2px;
+	color:#333;
+	font-size:12px;
+	border-bottom:1px dotted #999;	
+}
+
+#ndlsh a:hover {
+	color:#666;
+}
+
+#ndlsh p{
+	color:#CCC;
+	text-align:right;
+	margin:0 10px 0 0;
+}
+
+/* もしかして */
+#no_result {
+	padding-bottom:10px;
+	background:url(images/help.png) no-repeat 100% 90% #FFF;	
+}
+
+#no_result h3 {
+	margin:0 10px;
+	padding:5px;
+	color:#000;
+	font-size:12px;
+	font-weight:normal;
+	border-bottom:1px solid #999;
+}
+
+#no_result ul{
+	margin:0;
+	padding:10px 30px;
+	line-height:1.6em;
+}
+
+#no_result a{
+	color:#333;
+	border-bottom:1px dotted #999;	
+}
+
+#no_result a:hover {
+	color:#666;
+}
+
+#delete_history {
+	color:#FFF;
+	margin-left:10px;
+}
+
+#delete_history:hover {
+	cursor:pointer;
+	color:#CCC;	
+}

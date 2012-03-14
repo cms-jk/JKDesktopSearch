@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+/* content block 3 */
+#mcs3_container{ height:100%; padding:0 5px 0 5px;}
+#mcs3_container .customScrollBox{position:relative; height:100%; overflow:hidden;}
+#mcs3_container .customScrollBox .container{position:relative; width:300px; top:0; float:left;}
+#mcs3_container .customScrollBox .content{clear:both;}
+#mcs3_container .dragger_container{position:relative; width:0px; height:25%; float:left; margin:50% 0 0 15px; border-left:1px solid #31231E; border-right:1px solid #8E7757; cursor:pointer;z-index:0;}
+#mcs3_container .dragger{position:absolute; width:9px; height:60px;background:#CCC; margin-left:-5px; overflow:hidden; cursor:pointer;z-index: 0;}
+#mcs3_container .dragger_pressed{position:absolute; width:9px; height:60px; background:#FFF; margin-left:-5px; overflow:hidden; cursor:pointer;}
