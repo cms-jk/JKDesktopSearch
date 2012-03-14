@@ -1,0 +1,13 @@
+# コンパイル生成物を無視します
+bin/
+My\ Project/
+obj/
+Service\ References/
+SolutionBin/
+
+# インストーラーの生成物を無視します
+Debug/
+Release/
+
+# インストーラー設定値のメモファイル。積極的に公開すべきではない情報
+url.txt
