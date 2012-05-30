@@ -17,7 +17,7 @@
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
-    <ApplicationIcon>jk_l.ico</ApplicationIcon>
+    <ApplicationIcon>icon_middle.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <ManifestCertificateThumbprint>CAA930E7D1506F98EE09B4FCC4127E97F0C46A8E</ManifestCertificateThumbprint>
@@ -182,7 +182,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="jk_l.ico" />
+    <Content Include="icon_middle.ico">
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

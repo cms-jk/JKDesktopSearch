@@ -33,14 +33,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6106C7DD34A94A88B8FFC85BCFBB7066"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_626C8D9AE8A0E3E52E36A3C9A411F811"
+        "OwnerKey" = "8:_25E6C5D6C33848688A05D35E33BD1252"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_626C8D9AE8A0E3E52E36A3C9A411F811"
-        "OwnerKey" = "8:_25E6C5D6C33848688A05D35E33BD1252"
+        "MsmKey" = "8:_6AF7712F2FEF4E6492208E1C46F1BF82"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -185,11 +185,6 @@
             "AssemblyAsmDisplayName" = "8:JKWin32HookAndCom, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_36DCEDBA42BD7EA55B26037FE1AD65FA"
-                    {
-                    "Name" = "8:JKWin32HookAndCom.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:JKWin32HookAndCom.dll"
             "TargetName" = "8:"
@@ -209,26 +204,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6106C7DD34A94A88B8FFC85BCFBB7066"
-            {
-            "SourcePath" = "8:..\\JKOpenSourceApplication\\jk_l.ico"
-            "TargetName" = "8:jk_l.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_626C8D9AE8A0E3E52E36A3C9A411F811"
             {
             "AssemblyRegister" = "3:1"
@@ -236,11 +211,6 @@
             "AssemblyAsmDisplayName" = "8:JKAppliGlobalHookProcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_626C8D9AE8A0E3E52E36A3C9A411F811"
-                    {
-                    "Name" = "8:JKAppliGlobalHookProcess.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:JKAppliGlobalHookProcess.exe"
             "TargetName" = "8:"
@@ -258,6 +228,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AF7712F2FEF4E6492208E1C46F1BF82"
+            {
+            "SourcePath" = "8:..\\JKOpenSourceApplication\\icon_middle.ico"
+            "TargetName" = "8:icon_middle.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_743BCE39A5ED3BBD59ED869717B01E78"
@@ -511,7 +501,7 @@
             "Target" = "8:_25E6C5D6C33848688A05D35E33BD1252"
             "Folder" = "8:_DFF0BD978076465986FF44C7F63809D5"
             "WorkingFolder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
-            "Icon" = "8:_6106C7DD34A94A88B8FFC85BCFBB7066"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C252323755B547A6B7DED338A4BF1FFA"
@@ -525,7 +515,7 @@
             "Target" = "8:_25E6C5D6C33848688A05D35E33BD1252"
             "Folder" = "8:_04F2ED44552249C083EA8E0D2915824B"
             "WorkingFolder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
-            "Icon" = "8:_6106C7DD34A94A88B8FFC85BCFBB7066"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }

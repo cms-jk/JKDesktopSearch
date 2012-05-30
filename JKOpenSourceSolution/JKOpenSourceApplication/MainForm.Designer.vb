@@ -109,7 +109,7 @@ Partial Class JKDeskTopSearch
         '
         Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JKウェブToolStripMenuItem, Me.スタイルの変更ToolStripMenuItem, Me.タスクバーに格納ToolStripMenuItem, Me.使いかたヘルプToolStripMenuItem, Me.バージョン情報ToolStripMenuItem})
         Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
-        Me.ContextMenuStrip2.Size = New System.Drawing.Size(257, 136)
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(257, 114)
         '
         'JKウェブToolStripMenuItem
         '
