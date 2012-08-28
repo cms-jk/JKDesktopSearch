@@ -58,6 +58,7 @@ Public Class OrgWebForm
         'WebBrowser1
         Me.WebBrowser1 = New ExWebBrowser
         Me.WebBrowser1.Dock = DockStyle.Fill
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         AddHandler WebBrowser1.NewWindow2, AddressOf WebBrowser_NewWindow2
 
         'タブを介さずに直接フォーム上にブラウザを追加
@@ -139,6 +140,7 @@ Public Class OrgWebForm
             'Windowの再利用をせずにタブで開く場合----（WebBrowser1の再設定が必要）
             'WebBrowser1の定義
             OrgWebForm2.WebBrowser1 = New ExWebBrowser
+            OrgWebForm2.WebBrowser1.ScriptErrorsSuppressed = True
             OrgWebForm2.WebBrowser1.Dock = DockStyle.Fill
             AddHandler OrgWebForm2.WebBrowser1.NewWindow2, AddressOf WebBrowser_NewWindow2
 

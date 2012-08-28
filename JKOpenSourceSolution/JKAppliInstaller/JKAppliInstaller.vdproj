@@ -185,6 +185,11 @@
             "AssemblyAsmDisplayName" = "8:JKWin32HookAndCom, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_36DCEDBA42BD7EA55B26037FE1AD65FA"
+                    {
+                    "Name" = "8:JKWin32HookAndCom.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:JKWin32HookAndCom.dll"
             "TargetName" = "8:"
@@ -211,6 +216,11 @@
             "AssemblyAsmDisplayName" = "8:JKAppliGlobalHookProcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_626C8D9AE8A0E3E52E36A3C9A411F811"
+                    {
+                    "Name" = "8:JKAppliGlobalHookProcess.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:JKAppliGlobalHookProcess.exe"
             "TargetName" = "8:"
@@ -501,7 +511,7 @@
             "Target" = "8:_25E6C5D6C33848688A05D35E33BD1252"
             "Folder" = "8:_DFF0BD978076465986FF44C7F63809D5"
             "WorkingFolder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
-            "Icon" = "8:"
+            "Icon" = "8:_6AF7712F2FEF4E6492208E1C46F1BF82"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C252323755B547A6B7DED338A4BF1FFA"
@@ -515,7 +525,7 @@
             "Target" = "8:_25E6C5D6C33848688A05D35E33BD1252"
             "Folder" = "8:_04F2ED44552249C083EA8E0D2915824B"
             "WorkingFolder" = "8:_C0AA3451184742998ABC3105A31D2A8F"
-            "Icon" = "8:"
+            "Icon" = "8:_6AF7712F2FEF4E6492208E1C46F1BF82"
             "Feature" = "8:"
             }
         }

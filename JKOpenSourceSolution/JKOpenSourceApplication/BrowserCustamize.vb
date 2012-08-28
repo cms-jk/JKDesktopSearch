@@ -81,6 +81,16 @@ Public Class ExWebBrowser
             cancel = e.Cancel
         End Sub
     End Class
+
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        '
+        'ExWebBrowser
+        '
+        Me.ScriptErrorsSuppressed = True
+        Me.ResumeLayout(False)
+
+    End Sub
 End Class
 
 Public Delegate Sub WebBrowserNewWindow2EventHandler(ByVal sender As Object, ByVal e As WebBrowserNewWindow2EventArgs)

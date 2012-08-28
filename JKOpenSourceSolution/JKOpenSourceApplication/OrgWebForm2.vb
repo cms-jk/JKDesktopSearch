@@ -41,6 +41,7 @@ Public Class OrgWebForm2
 
         'WebBrowser1の定義
         Me.WebBrowser1 = New ExWebBrowser
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Dock = DockStyle.Fill
         AddHandler WebBrowser1.NewWindow2, AddressOf WebBrowser_NewWindow2
 
@@ -63,7 +64,7 @@ Public Class OrgWebForm2
         Me.Controls.Add(Me.TabControl1)
 
         '右クリック抑制
-        WebBrowser1.IsWebBrowserContextMenuEnabled = False
+        'WebBrowser1.IsWebBrowserContextMenuEnabled = False
 
         '解除
         Me.TopMost = False
@@ -111,6 +112,7 @@ Public Class OrgWebForm2
 
         'WebBrowser1の定義
         Me.WebBrowser1 = New ExWebBrowser
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Dock = DockStyle.Fill
         AddHandler Me.WebBrowser1.NewWindow2, AddressOf WebBrowser_NewWindow2
 
@@ -138,6 +140,10 @@ Public Class OrgWebForm2
     '******ブラウザ表示内容の編集
     Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
 
+        '凡例が複数開けない対策
+        'TODO:nameは維持して凡例用ウインドウをリロードするのがベスト
+        Me.WebBrowser1.Document.Window.Name = ""
+
         '水平スクロールバーを非表示/縦スクロールバーのカラーのセット
         Me.WebBrowser1.Document.Body.Style = "overflow-x:hidden;scrollbar-base-color: #DA7C0C;scrollbar-face-color: #F78D1D;scrollbar-highlight-color: #fff;scrollbar-arrow-color: #fff;scrollbar-darkshadow-color:#666;"
 
@@ -158,26 +164,43 @@ Public Class OrgWebForm2
         'ただし「Powered by BUKKYO UNIVERSITY LIBRALY」という文字列への変更は可能です
         '******************************************************************************************************
         Dim idElement As HtmlElement = WebBrowser1.Document.GetElementById("closeArea")
+
+        If idElement Is Nothing Then
+            ' 凡例ページの場合
+            Dim cbElements As HtmlElementCollection = WebBrowser1.Document.GetElementsByTagName("div")
+            Dim divElm As HtmlElement
+
+            If cbElements.Count > 0 Then
+                For Each divElm In cbElements
+                    If divElm.GetAttribute("className") = "closeBox" Then
+                        idElement = divElm
+                        Exit For
+                    End If
+                Next
+            End If
+
+        End If
+
         If idElement IsNot Nothing Then
             idElement.InnerText = "技術提供：佛教大学図書館"
             idElement.Style = "font-size: 75%;"
         End If
 
         'id=naviMarginFrameを非表示
-        Dim idElement2 As HtmlElement = WebBrowser1.Document.GetElementById("naviMarginFrame")
-        If idElement2 IsNot Nothing Then idElement2.InnerText = ""
+        'Dim idElement2 As HtmlElement = WebBrowser1.Document.GetElementById("naviMarginFrame")
+        'If idElement2 IsNot Nothing Then idElement2.InnerText = ""
 
         ''id=naviContainBaseを非表示
-        Dim idElement3 As HtmlElement = WebBrowser1.Document.GetElementById("naviContainBase")
-        If idElement3 IsNot Nothing Then idElement3.InnerText = ""
+        Dim idElement3 As HtmlElement = WebBrowser1.Document.GetElementById("naviContainerBase")
+        If idElement3 IsNot Nothing Then idElement3.Style = "display:none"
 
-        ''id=navSideAreaを非表示
-        Dim idElement4 As HtmlElement = WebBrowser1.Document.GetElementById("naviSideArea")
-        If idElement4 IsNot Nothing Then idElement4.InnerText = ""
+        ' ''id=navSideAreaを非表示
+        'Dim idElement4 As HtmlElement = WebBrowser1.Document.GetElementById("naviSideArea")
+        'If idElement4 IsNot Nothing Then idElement4.InnerText = ""
 
-        'id=headerFieldを非表示
-        Dim idElement5 As HtmlElement = WebBrowser1.Document.GetElementById("headerField")
-        If idElement5 IsNot Nothing Then idElement5.InnerText = ""
+        ''id=headerFieldを非表示
+        'Dim idElement5 As HtmlElement = WebBrowser1.Document.GetElementById("headerField")
+        'If idElement5 IsNot Nothing Then idElement5.InnerText = ""
 
         '*****日本歴史地名体系の場合
         'クラス名で指定td class="leftSideArea
@@ -193,9 +216,10 @@ Public Class OrgWebForm2
                 Dim NameStr As String = AllElement.GetAttribute("className")
                 If ((NameStr IsNot Nothing) And (NameStr.Length <> 0)) Then
 
-                    'OuterHtmlがエラーを生じさせるのでInnertextで削除
+                    'OuterHtmlがエラーを生じさせるのでInnertextで削除×
+                    '↑完全に削除するとScriptエラーの原因となるので、非表示のみとする
                     If NameStr.ToLower().Equals("rightsidearea") Or NameStr.ToLower().Equals("leftsidearea") Then
-                        AllElement.InnerText = ""
+                        AllElement.Style = "display:none"
                     End If
 
                 End If
@@ -283,7 +307,14 @@ Public Class OrgWebForm2
             'タブページが1枚しかないとき
             Me.Close()
         Else
+            '指定タブを閉じる
+            Dim SelectTabIndex As Short = Me.TabControl1.SelectedIndex
 
+            If SelectTabIndex < 0 Then
+                Exit Sub
+            End If
+
+            Me.TabControl1.TabPages.RemoveAt(SelectTabIndex)
         End If
     End Sub
 

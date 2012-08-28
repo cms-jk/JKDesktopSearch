@@ -35,7 +35,7 @@ Partial Class OrgWebForm2
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.タブを閉じるToolStripMenuItem, Me.戻るToolStripMenuItem, Me.進むToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(173, 92)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(173, 70)
         '
         'タブを閉じるToolStripMenuItem
         '
